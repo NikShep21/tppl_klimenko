@@ -1,2 +1,7 @@
 /average/average
 /average/main.o
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
