@@ -82,7 +82,8 @@ def evaluate(expression: str, trace: bool = False) -> float:
                     f"Шаг {step}: '{token}' - неизвестное число или операция. "
                     f"Допустимые операции: {', '.join(OPERATIONS)}. "
                     "Разделяйте числа и операции пробелами; "
-                    "дробную часть числа отделяйте точкой."
+                    "дробную часть числа отделяйте точкой. "
+                    'Передайте всё выражение в кавычках, например: "2 3 ~".'
                 ) from None
             if not math.isfinite(number):
                 raise ValueError(f"Шаг {step}: число '{token}' должно быть конечным.")
@@ -106,7 +107,7 @@ def main() -> int:
         epilog='Пример запуска: python main.py "3 0 4 ~ 2 ~"',
     )
     parser.add_argument(
-        "expression", nargs="+", help="выражение"
+        "expression", nargs="+", help='выражение, рекомендуется в кавычках, например "2 3 ~"'
     )
     args = parser.parse_args()
     expression = " ".join(args.expression).strip()
