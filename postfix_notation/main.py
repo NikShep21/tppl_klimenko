@@ -53,6 +53,7 @@ OPERATIONS = {
     "*": multiply,
     "/": divide,
     "~": special,
+    "!": pow
 }
 
 
