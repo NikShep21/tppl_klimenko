@@ -34,6 +34,10 @@ def divide(stack: list) -> float:
         raise ValueError("делить на ноль нельзя.")
     return left / right
 
+def pow(stack: list) -> float:
+    left, right = pop_operands(stack)
+    return left ** right
+
 
 def special(stack: list) -> float:
     left, right = pop_operands(stack)
